@@ -14,8 +14,8 @@ bot = commands.Bot(
 	case_insensitive=True,  # Commands aren't case-sensitive
   intents=intents
 )
-
-bot.author_id = 623277032930803742  # Change to your discord id!!!
+botauthor = os.environ.get("BOT_AUTHOR_ID") 
+bot.author_id = botauthor # Change to your discord id!!!
 
 @bot.event 
 async def on_ready():  # When the bot is ready
